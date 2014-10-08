@@ -314,17 +314,17 @@ void Rtc_Pcf8593::setAlarmMode(byte mode)
     Rtc_Pcf8593::readStatus2();
     status2 &= ~0x30;		//clear old value
     status2 |= mode;		//add new value
+
+    Wire.beginTransmission(Rtcc_Addr);    // Issue I2C start signal
+    Wire.write((byte)RTCC_STAT2_ADDR);
+    Wire.write((byte)status2);            //set alarm mode
+    Wire.endTransmission();
     
     if (mode == 0x00){		//enable or disable alarm
         Rtc_Pcf8593::clearAlarm();
     }else{
         Rtc_Pcf8593::enableAlarm();
     }
-
-    Wire.beginTransmission(Rtcc_Addr);    // Issue I2C start signal
-    Wire.write((byte)RTCC_STAT2_ADDR);
-    Wire.write((byte)status2);            //set alarm mode
-    Wire.endTransmission();
 }
 
 /**
