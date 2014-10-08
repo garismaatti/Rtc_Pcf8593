@@ -55,7 +55,7 @@ void setup()
    * hr, min, sec */
   rtc.setAlarmTime(1, 16, 00);
   //* day, month */
-  rtc.setAlarmDate(14, 6);
+  rtc.setAlarmDate(14, 3);
   rtc.setAlarmMode(RTCC_ALARM_DATED);
 }
 
