@@ -1,4 +1,4 @@
-/* Demonstration of Rtc_Pcf8563 Clock on LCD. 
+/* Demonstration of Rtc_Pcf8593 Clock on LCD. 
  *
  * I used a RBBB with Arduino IDE, the pins are mapped a 
  * bit differently.  Change for your hw.
@@ -6,24 +6,24 @@
  *
  * This sketch connects a lcd to display the clock output.
  * 
- * setup:  see Pcf8563 data sheet.
- *         1x 10Kohm pullup on Pin3 INT
- *         No pullups on Pin5 or Pin6 (I2C internals used)
+ * setup:  see Pcf8593 data sheet.
+ *         1x 10Kohm pullup on Pin3 RESET
+ *         No pullups on Pin1 or Pin2 (I2C internals used)
  *         1x 0.1pf on power
  *         1x 32khz chrystal
  *         1x h44780 LCD
  *
- * Joe Robertson, jmr
- * orbitalair@bellsouth.net
+ * Joe Robertson, jmr orbitalair@bellsouth.net original library for Pcf8563
+ * Modified by garismaatti garismaatti@gmail.com to work with Pcf8593
  */
 
 #include <Wire.h>
-#include <Rtc_Pcf8563.h>
+#include <Rtc_Pcf8593.h>
 /* add the lcd support */ 
 #include <LiquidCrystal.h>
 
 //init the real time clock
-Rtc_Pcf8563 rtc;
+Rtc_Pcf8593 rtc;
 
 /* initialize the library objects */
 /* LiquidCrystal lcd(rs, en, d4, d5, d6, d7); */
@@ -38,7 +38,7 @@ void setup()
   rtc.initClock();
   //set a time to start with.
   //day, weekday, month, century, year
-  rtc.setDate(14, 6, 3, 0, 10);
+  rtc.setDate(14, 6, 3, 0, 14);
   //hr, min, sec
   rtc.setTime(1, 15, 40);
 }

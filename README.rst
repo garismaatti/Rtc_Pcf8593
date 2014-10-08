@@ -1,16 +1,19 @@
 
-This is my fixed/expanded version of the original Rtc_Pcf8563 library for Arduino.
+This is my rewrited version of the original Rtc_Pcf8563 library for Arduino.
 All credits go to the original authors.
 
 My version differs for
 
-* a few more methods, mostly useful for debugging
-* a single bug fix in RTCC_ALARM_AF
+* Rewrited everyting to be for Pcf8593 Real Time Clock (Not Pcf8563 anymore)
+* Removed square wave, not supported by Pcf8593
+* Added new alarm methods supported by Pcf8593 (daily, weekdays, dated)
+* Timer is not supported, because used for saving year
+* 
 
 
 NAME
 ----
-Pcf8563 Real Time Clock support routines
+Pcf8593 Real Time Clock support routines
 
 AUTHOR
 ------
@@ -35,12 +38,15 @@ HISTORY
 * 28/02/2012 A. Pasotti
    * fixed a bug in RTCC_ALARM_AF,
    * added a few (not really useful) methods
+* 09/10/2014 garismaatti
+   * rewrited fom Pcf8563 to Pcf8593 Real Time Clock
+   * https://github.com/garismaatti/Rtc_Pcf8593/
+   * removed square wave, not supported by Pcf8593
+   * added new alarm methods supported by Pcf8593
+   * timer is not supported, because used for saving year
 
 
 TODO
 ----
-
-Add Euro date format
-Add short time (hh:mm) format
 Add 24h/12h format
 Add timer support

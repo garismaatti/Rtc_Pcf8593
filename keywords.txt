@@ -1,32 +1,47 @@
 #######################################
-# Syntax Coloring Map For Rtc_Pcf8563
+# Syntax Coloring Map For Rtc_Pcf8593
 ####################################### 
 # Datatypes (KEYWORD1)
 #######################################
 
-Rtc_Pcf8563	KEYWORD1
+Rtc_Pcf8593	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
 initClock	KEYWORD2
-clearStatus KEYWORD2
-getDate	KEYWORD2
-setDate	KEYWORD2
-getTime	KEYWORD2
-setTime	KEYWORD2
-setAlarm 	KEYWORD2
+clearStatus 	KEYWORD2
+readStatus1	KEYWORD2
+readStatus2	KEYWORD2
+getDate		KEYWORD2
+setDate		KEYWORD2
+getTime		KEYWORD2
+setTime		KEYWORD2
+getAlarm 	KEYWORD2
+setAlarmTime	KEYWORD2
+setAlarmDate	KEYWORD2
+setAlarmWeekday	KEYWORD2
+setAlarmMode	KEYWORD2
 clearAlarm	KEYWORD2
+resetAlarm	KEYWORD2
+alarmEnabled	KEYWORD2
+alarmActive	KEYWORD2
 getStatus1	KEYWORD2
 getStatus2	KEYWORD2
 getSecond	KEYWORD2
 getMinute	KEYWORD2
-getHour	KEYWORD2
-getDay	KEYWORD2
+getHour		KEYWORD2
+getDay		KEYWORD2
 getWeekDay	KEYWORD2
 getMonth	KEYWORD2
-getYear	KEYWORD2
+getYear		KEYWORD2
+getAlarmSecond	KEYWORD2
+getAlarmMinute	KEYWORD2
+getAlarmHour	KEYWORD2
+getAlarmDay	KEYWORD2
+getAlarmMonth	KEYWORD2
+getAlarmWeekday KEYWORD2
 formatTime	KEYWORD2
 formatDate	KEYWORD2
 	
