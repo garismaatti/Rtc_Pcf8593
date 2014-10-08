@@ -46,7 +46,7 @@ void setup()
   rtc.initClock();
   /* set a time to start with.
    * day, weekday(0=Sun), month, century, year */
-  rtc.setDate(14, 6, 3, 0, 14);
+  rtc.setDate(14, 3, 6, 0, 14);
   /* hr, min, sec */
   rtc.setTime(1, 15, 40);
   /* set an alarm for 20 secs later...
